@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Kanyakumari</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Roboto', 'sans-serif']
+          },
+          colors: {
+            sunset: '#f97316',
+            sea: '#0f172a',
+            sand: '#fef3c7'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-sand font-body text-sea">
+
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-3xl font-display font-bold text-sunset">Kanyakumari</h1>
+      <nav>
+        <ul class="flex space-x-6 text-lg font-semibold">
+          <li><a href="index.html" class="hover:text-sunset transition">Home</a></li>
+          <li><a href="about.html" class="text-sunset font-bold">About</a></li>
+          <li><a href="attractions.html" class="hover:text-sunset transition">Attractions</a></li>
+          <li><a href="contact.html" class="hover:text-sunset transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="max-w-5xl mx-auto px-4 py-16">
+    <h2 class="text-4xl font-display font-bold text-center mb-10">About Kanyakumari</h2>
+    <p class="text-lg mb-8">
+      Kanyakumari, located at the southernmost tip of the Indian peninsula, is a unique destination where the Bay of Bengal, the Arabian Sea, and the Indian Ocean meet. This coastal town is known for its spiritual significance, architectural marvels, and scenic beauty. Here are some of the must-visit attractions in Kanyakumari:
+    </p>
+
+    <div class="space-y-8">
+      <div>
+        <h3 class="text-2xl font-display font-semibold text-sunset mb-1">Vivekananda Rock Memorial</h3>
+        <p>This memorial is dedicated to Swami Vivekananda who meditated here in 1892. Located on a rocky island, it offers panoramic views of the ocean and a tranquil space for reflection.</p>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-display font-semibold text-sunset mb-1">Thiruvalluvar Statue</h3>
+        <p>Standing tall at 133 feet, this statue honors the ancient Tamil poet Thiruvalluvar, the author of the classic Tamil text 'Thirukkural'. It symbolizes Tamil culture and heritage.</p>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-display font-semibold text-sunset mb-1">Kanyakumari Beach</h3>
+        <p>Famous for its sunrise and sunset views, the beach is the perfect spot to experience the confluence of the three seas. Its natural beauty draws tourists throughout the year.</p>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-display font-semibold text-sunset mb-1">Padmanabhapuram Palace</h3>
+        <p>This historical wooden palace, once the seat of the Travancore rulers, showcases Kerala-style architecture and craftsmanship, offering insight into the region’s royal heritage.</p>
+      </div>
+
+      <div>
+        <h3 class="text-2xl font-display font-semibold text-sunset mb-1">Suchindram Temple</h3>
+        <p>Known for its architectural beauty and musical pillars, this temple is dedicated to a unique representation of the Hindu trinity—Shiva, Vishnu, and Brahma combined into one deity.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white text-center py-6 border-t">
+    <p class="text-sea">&copy; 2025 Kanyakumari Tourism. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kanyakumari Tourism</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Roboto', 'sans-serif']
+          },
+          colors: {
+            sunset: '#f97316',
+            sea: '#0f172a',
+            sand: '#fef3c7'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-sand font-body text-sea">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-3xl font-display font-bold text-sunset">Kanyakumari</h1>
+      <nav>
+        <ul class="flex space-x-6 text-lg font-semibold">
+          <li><a href="index.html" class="text-sea hover:text-sunset transition">Home</a></li>
+          <li><a href="about.html" class="text-sea hover:text-sunset transition">About</a></li>
+          <li><a href="attractions.html" class="text-sea hover:text-sunset transition">Attractions</a></li>
+          <li><a href="contact.html" class="text-sea hover:text-sunset transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-[85vh]" style="background-image: url('images/kanyakumari-sunset.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-4">
+      <h2 class="text-white font-display text-5xl md:text-6xl font-bold mb-6 animate-fade-in">Welcome to Kanyakumari</h2>
+      <p class="text-white text-lg md:text-xl max-w-2xl mb-6 animate-fade-in delay-200">
+        Discover the beauty where oceans meet and culture thrives. Plan your perfect getaway to India's southern tip.
+      </p>
+      <a href="attractions.html" class="bg-sunset text-white px-6 py-3 rounded-md shadow-lg hover:bg-orange-600 transition animate-fade-in delay-300">
+        Explore Attractions
+      </a>
+    </div>
+  </section>
+
+  <!-- Highlights -->
+  <section class="max-w-6xl mx-auto px-4 py-20 text-center">
+    <h3 class="text-4xl font-display font-bold mb-12 text-sea">Why Visit Kanyakumari?</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/vivekananda-rock-memorial.jpg" alt="Vivekananda Rock" class="rounded-lg mb-4 h-48 w-full object-cover" />
+        <h4 class="text-xl font-semibold text-sunset mb-2">Iconic Landmarks</h4>
+        <p>Explore the Vivekananda Rock, Thiruvalluvar Statue, and ancient temples at the confluence of seas.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/kanyakumari-beach.jpg" alt="Beach" class="rounded-lg mb-4 h-48 w-full object-cover" />
+        <h4 class="text-xl font-semibold text-sunset mb-2">Stunning Beaches</h4>
+        <p>Enjoy the peaceful sunrises and vibrant sunsets at Kanyakumari Beach and nearby scenic coasts.</p>
+      </div>
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-1">
+        <img src="images/thirparappu-falls.jpg" alt="Waterfalls" class="rounded-lg mb-4 h-48 w-full object-cover" />
+        <h4 class="text-xl font-semibold text-sunset mb-2">Natural Wonders</h4>
+        <p>From waterfalls to hill stations nearby, nature’s charm surrounds Kanyakumari in every direction.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center py-6 border-t mt-12">
+    <p class="text-sea">&copy; 2025 Kanyakumari Tourism. All rights reserved.</p>
+  </footer>
+
+  <!-- Fade-in Animations -->
+  <style>
+    .animate-fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s forwards;
+    }
+    .animate-fade-in.delay-200 {
+      animation-delay: 0.2s;
+    }
+    .animate-fade-in.delay-300 {
+      animation-delay: 0.3s;
+    }
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</body>
+</html>

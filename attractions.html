@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attractions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body: ['Roboto', 'sans-serif']
+          },
+          colors: {
+            sunset: '#f97316',
+            sea: '#0f172a',
+            sand: '#fef3c7'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .modal {
+      display: none;
+    }
+    .modal.open {
+      display: flex;
+    }
+  </style>
+</head>
+<body class="bg-sand font-body text-sea">
+
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-3xl font-display font-bold text-sunset">Kanyakumari</h1>
+      <nav>
+        <ul class="flex space-x-6 text-lg font-semibold">
+          <li><a href="index.html" class="hover:text-sunset transition">Home</a></li>
+          <li><a href="about.html" class="hover:text-sunset transition">About</a></li>
+          <li><a href="attractions.html" class="text-sunset font-bold">Attractions</a></li>
+          <li><a href="contact.html" class="hover:text-sunset transition">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="max-w-5xl mx-auto px-4 py-16">
+    <h2 class="text-4xl font-display font-bold text-center mb-12">Top Attractions</h2>
+
+    <div class="space-y-10">
+      <!-- Each attraction -->
+      <!-- Repeat block with image click modal -->
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <img src="images/vivekananda-rock-memorial.jpg" alt="Vivekananda Rock Memorial" class="w-full h-64 object-cover rounded-md mb-4 cursor-pointer" onclick="openModal(this.src)"/>
+        <h3 class="text-2xl font-display font-semibold mb-2">Vivekananda Rock Memorial</h3>
+        <p class="text-sea mb-3">A sacred monument built in honor of Swami Vivekananda, located on a small island. It is known for its spiritual significance and panoramic ocean views.</p>
+        <a href="https://www.google.com/maps?q=Vivekananda+Rock+Memorial+Kanyakumari" target="_blank" class="text-sunset underline hover:text-orange-600">View on Map</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <img src="images/thiruvalluvar-statue.jpg" alt="Thiruvalluvar Statue" class="w-full h-64 object-cover rounded-md mb-4 cursor-pointer" onclick="openModal(this.src)"/>
+        <h3 class="text-2xl font-display font-semibold mb-2">Thiruvalluvar Statue</h3>
+        <p class="text-sea mb-3">A majestic 133-foot tall statue dedicated to the ancient Tamil poet Thiruvalluvar. It stands beside the Vivekananda Rock Memorial and represents Tamil culture and literature.</p>
+        <a href="https://www.google.com/maps?q=Thiruvalluvar+Statue+Kanyakumari" target="_blank" class="text-sunset underline hover:text-orange-600">View on Map</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <img src="images/kanyakumari-beach.jpg" alt="Kanyakumari Beach" class="w-full h-64 object-cover rounded-md mb-4 cursor-pointer" onclick="openModal(this.src)"/>
+        <h3 class="text-2xl font-display font-semibold mb-2">Kanyakumari Beach</h3>
+        <p class="text-sea mb-3">Famous for the meeting point of three oceans and breathtaking sunrise and sunset views, Kanyakumari Beach offers a unique natural experience.</p>
+        <a href="https://www.google.com/maps?q=Kanyakumari+Beach" target="_blank" class="text-sunset underline hover:text-orange-600">View on Map</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <img src="images/padmanabhapuram_palace.jpg" alt="Padmanabhapuram Palace" class="w-full h-64 object-cover rounded-md mb-4 cursor-pointer" onclick="openModal(this.src)"/>
+        <h3 class="text-2xl font-display font-semibold mb-2">Padmanabhapuram Palace</h3>
+        <p class="text-sea mb-3">A beautifully preserved wooden palace complex from the 16th century, showcasing traditional Kerala architecture and royal artifacts.</p>
+        <a href="https://www.google.com/maps?q=Padmanabhapuram+Palace" target="_blank" class="text-sunset underline hover:text-orange-600">View on Map</a>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-6">
+        <img src="images/suchindram_temple.jpg" alt="Suchindram Temple" class="w-full h-64 object-cover rounded-md mb-4 cursor-pointer" onclick="openModal(this.src)"/>
+        <h3 class="text-2xl font-display font-semibold mb-2">Suchindram Temple</h3>
+        <p class="text-sea mb-3">A famous Hindu temple known for its unique architecture, musical pillars, and deities that combine the trinity of Hinduism: Shiva, Vishnu, and Brahma.</p>
+        <a href="https://www.google.com/maps?q=Suchindram+Temple+Kanyakumari" target="_blank" class="text-sunset underline hover:text-orange-600">View on Map</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-white text-center py-6 border-t mt-12">
+    <p class="text-sea">&copy; 2025 Kanyakumari Tourism. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal -->
+  <div id="imageModal" class="modal fixed inset-0 bg-black bg-opacity-80 items-center justify-center z-50">
+    <span onclick="closeModal()" class="absolute top-4 right-6 text-white text-3xl cursor-pointer">&times;</span>
+    <img id="modalImage" class="max-h-[90vh] max-w-[90vw] rounded-lg" />
+  </div>
+
+  <script>
+    function openModal(src) {
+      document.getElementById('modalImage').src = src;
+      document.getElementById('imageModal').classList.add('open');
+    }
+    function closeModal() {
+      document.getElementById('imageModal').classList.remove('open');
+    }
+  </script>
+
+</body>
+</html>
